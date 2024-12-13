@@ -1,0 +1,40 @@
+### GET all users
+GET https://localhost:7266/api/users
+Accept: application/json
+
+###
+
+### GET a specific user by ID
+GET https://localhost:7266/api/users/1
+Accept: application/json
+
+###
+
+### POST create a new user
+POST https://localhost:7266/api/users
+Content-Type: application/json
+
+{
+  "name": "John Doe",
+  "email": "johndoe@example.com",
+  "role": "Manager"
+}
+
+###
+
+### PUT update an existing user
+PUT https://localhost:7266/api/users/1
+Content-Type: application/json
+
+{
+  "id": 1,
+  "name": "John Smith",
+  "email": "johnsmith@example.com",
+  "role": "Administrator"
+}
+
+###
+
+### DELETE a user by ID
+DELETE https://localhost:7266/api/users/1
+

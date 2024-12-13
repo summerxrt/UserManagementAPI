@@ -1,0 +1,23 @@
+{
+        "IpRateLimit": {
+          "EnableEndpointRateLimiting": true,
+          "StackBlockedRequests": false,
+          "HttpStatusCode": 429,
+          "RealIpHeader": "X-Real-IP",
+          "ClientWhitelist": ["127.0.0.1"],
+          "EndpointWhitelist": ["GET:/api/health"],
+          "GeneralRules": [
+            {
+              "Endpoint": "*",
+              "Period": "1m",
+              "Limit": 10
+            },
+            {
+              "Endpoint": "*",
+              "Period": "1h",
+              "Limit": 100
+            }
+          ]
+        }
+      }
+      
